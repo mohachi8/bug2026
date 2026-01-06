@@ -1,0 +1,121 @@
+palette = 'custom'
+
+format = """
+[](dark_blue)\
+[](bg:dark_blue fg:foreground)\
+$username\
+[](bg:blue fg:dark_blue)\
+$directory\
+[](fg:blue bg:light_blue)\
+$git_branch\
+$git_status\
+[](fg:light_blue bg:light_grey)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$kotlin\
+$python\
+$c\
+$java\
+[](fg:light_grey bg:background)\
+$time\
+[ ](fg:background)\
+$cmd_duration\
+\n$character"""
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+
+[username]
+show_always = true
+style_user = "bg:dark_blue fg:foreground"
+style_root = "bg:dark_blue fg:foreground"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:foreground bg:blue"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "fg:foreground bg:light_blue"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:foreground bg:light_blue"
+format = '[($all_status$ahead_behind )]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[c]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:foreground bg:light_grey"
+format = '[ $symbol ($version) ]($style)'
+
+[cmd_duration]
+show_milliseconds = true
+style = "fg:foreground"
+format = "[  $duration ]($style)"
+disabled = false
+show_notifications = true
+min_time_to_notify = 1000
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:foreground bg:background"
+format = '[  $time ]($style)'
+
+[palettes.custom]
+foreground = "#ddd8bb"
+background = "#1F1F28"
+red = "#E82424"
+green = "#98BB6C"
+light_blue = "#7E9CD8"
+blue = "#5A6FA8"
+dark_blue = "#3D4F7A"
+light_grey = "#45475a"
